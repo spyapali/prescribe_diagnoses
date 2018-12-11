@@ -8,7 +8,7 @@ class SelectBox extends React.Component {
         showItems: false,
         selectedItem: this.props.items && "",
         showDiagnosis: false,
-        selectedDiagnosis: this.props.selectedDiagnosis || "Please Select Diagnosis"
+        selectedDiagnosis: this.selectedDiagnosis || "Please Select Diagnosis"
     };
 
     dropDown = () => {
