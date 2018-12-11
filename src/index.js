@@ -1,37 +1,26 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import './index.css'
-import './index.json'
-
+import './index.css';
+import SelectBox from './select-box.js'
 
 
 class App extends Component {
     constructor() {
     super();
     this.state = {
-        pilot: "Name of Pilot Here",
-        result: null
-      };
-
+      }
     }
-
-    updateSymptom(event) {
-        this.setState({pilot: event.target.value.substr(0, 20)});
-
-    }
-
-    onClick() {
-    }
-
     render() {
         return <div>
-            <textarea value={this.state.pilot}
-            onChange = {this.updateSymptom.bind(this)}>
-            </textarea>
-            <button onClick={this.onClick}>Submit</button>
+            <SelectBox
+                items={[
+                    { value: 'Headache', id: 'Migraine' },
+                    { value: 'Blocked Nose', id: 'Cold' },
+                    { value: 'Sore Gums', id: 'Gum Infection' }
+                ]}
+            />
         </div>
     }
-
 }
 
 ReactDOM.render(
